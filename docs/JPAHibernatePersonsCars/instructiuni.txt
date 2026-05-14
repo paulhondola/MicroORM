@@ -1,0 +1,14 @@
+
+This is a Demo for JPA with Hibernate, using a H2 in-memory database
+
+In order to compile and run:
+
+mvn clean compile
+
+mvn exec:java -Dexec.mainClass="jpa1.MainApp"
+
+The H2 in-memory database is not persistent! (all data is lost when the application stops. Each run starts with an empty database)
+If you want to use the demo example using another database, you must  do changes in:
+-  src\main\resources\META-INF\persistence.xml
+-  pom.xml
+-  install database server (if needed)
