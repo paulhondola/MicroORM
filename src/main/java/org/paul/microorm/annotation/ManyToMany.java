@@ -1,0 +1,15 @@
+package org.paul.microorm.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface ManyToMany {
+    /** Set when this side does NOT own the junction table. */
+    String mappedBy() default "";
+    CascadeType[] cascade() default {};
+    FetchType fetch() default FetchType.EAGER;
+}
